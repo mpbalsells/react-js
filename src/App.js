@@ -1,9 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-
-
-import {Box, Stack, StackDivider, Heading, Text,  Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
+import {Button, Progress, Box, Stack, StackDivider, Heading, Text,  Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
 function App() {
   return (
     <div className="App">
@@ -11,7 +9,7 @@ function App() {
   <CardHeader>
     <Heading size='md'>Client Report</Heading>
   </CardHeader>
-
+  <Progress value={80} />
   <CardBody>
     <Stack divider={<StackDivider />} spacing='4'>
       <Box>
@@ -21,6 +19,17 @@ function App() {
         <Text pt='2' fontSize='sm'>
           View a summary of all your clients over the last month.
         </Text>
+        // The size prop affects the height of the button
+// It can still be overridden by passing a custom height
+<Button
+  size='md'
+  height='48px'
+  width='200px'
+  border='2px'
+  borderColor='green.500'
+>
+  Button
+</Button>
       </Box>
       <Box>
         <Heading size='xs' textTransform='uppercase'>
